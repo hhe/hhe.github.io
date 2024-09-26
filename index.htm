@@ -48,11 +48,47 @@
 </head>
 <body>
     <div class="container">
-        <h1>Hi</h1>
-        <p>
-            Just a reminder in case your mind is playing tricks on you today: You matter. You're important. 
-            You're loved. And your presence on this earth makes a difference whether you see it or not.
-        </p>
+        <h1 id="greeting"></h1>
+        <p id="quote"></p>
     </div>
+
+    <script>
+        const greetings = [
+            "Hello", "Hi there", "Welcome", "Good day", "Hey", 
+            "Greetings", "Howdy", "Salutations", "What's up", "Hi",
+            "Hey there", "Hello there", "Nice to see you", "Good to have you", "Hi friend"
+        ];
+
+        const motivationalQuotes = [
+            "Just a reminder in case your mind is playing tricks on you today: You matter. You're important. You're loved. And your presence on this earth makes a difference whether you see it or not.",
+            "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+            "You are capable of amazing things. Don’t let fear hold you back from reaching your full potential.",
+            "Every day may not be good, but there is something good in every day. Keep going.",
+            "The only limits in life are the ones you place on yourself. Dream big and take action.",
+            "You have within you right now, everything you need to deal with whatever the world throws at you.",
+            "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+            "You are stronger than you know, braver than you feel, and more capable than you imagine.",
+            "It’s okay to take a break. Rest, recharge, and come back stronger.",
+            "You are enough just as you are. Embrace your uniqueness and shine brightly.",
+            "Don’t wait for the perfect moment. Take the moment and make it perfect.",
+            "Progress is progress, no matter how small. Keep moving forward, one step at a time.",
+            "Great things never come from comfort zones. Embrace the challenges and grow from them.",
+            "You have the power to change your story. Rewrite it as many times as you need.",
+            "Every setback is a setup for a comeback. Don’t let failure define you, let it fuel you.",
+            "The journey is just as important as the destination. Take time to appreciate how far you've come.",
+            "Your potential is limitless. Don’t let doubt dim your light. Shine on.",
+            "Life is tough, but so are you. You’ve got this!",
+            "You are a work in progress, and that’s okay. Growth takes time, but you’re on the right path.",
+            "Keep your head up. You are capable, strong, and resilient, and you will overcome whatever comes your way."
+        ];
+
+        // Randomly choose a greeting and quote
+        const randomGreeting = greetings[Math.floor(Math.random() * greetings.length)];
+        const randomQuote = motivationalQuotes[Math.floor(Math.random() * motivationalQuotes.length)];
+
+        // Inject the chosen greeting and quote into the HTML
+        document.getElementById("greeting").innerText = randomGreeting;
+        document.getElementById("quote").innerText = randomQuote;
+    </script>
 </body>
 </html>
